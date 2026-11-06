@@ -11,3 +11,5 @@ Each prompt included: “Use case: stylized-concept. Asset: website illustration
 
 Other role illustrations and the time machine concept are reused from the existing website. The home banner uses the game main-menu illustration, adapted from the v095 menu artwork; it is not a gameplay capture.
 
+The BIM illustration `assets/role-bim-engineer.png` was edited from the earlier BIM concept using the built-in image generation tool. Prompt: “Edit this exact existing construction mission concept illustration. Change only the lower-right inset heading text from ‘BIM COORDINATOR’ to exactly ‘BIM ENGINEER’, in the same dark green uppercase lettering, same position and style. Preserve everything else exactly, including image framing, jetpack character, pipes, duct, arrows, line art, colors, and all other text and buttons. Do not add or remove any other content.” The earlier illustration remains in the assets folder.
+

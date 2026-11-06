@@ -1,6 +1,6 @@
 window.ROLES = [
   {
-    slug: 'bim', number: '01', name: 'BIM Coordinator', image: 'assets/role-bim.webp',
+    slug: 'bim', number: '01', name: 'BIM Engineer', image: 'assets/role-bim-engineer.png',
     hook: 'Shrink down. Find the clash.',
     challenge: 'A waterfall service pipe crosses an air duct and blocks access.',
     story: 'Travel to a fictional service corridor and use a shrink jetpack to see the problem up close. Find a route that leaves enough room for maintenance.',
@@ -14,12 +14,12 @@ window.ROLES = [
     ]
   },
   {
-    slug: 'construction', number: '02', name: 'Construction Manager', image: 'assets/role-construction.png',
+    slug: 'construction', number: '02', name: 'Construction Engineer', image: 'assets/role-construction.png',
     hook: 'Plan the lift. Keep everyone safe.',
     challenge: 'Waterfall equipment needs to reach its marked position safely and on time.',
     story: 'Lead a series of fictional lifting activities. Check the plan, protect the work area and guide the equipment into place before time runs out.',
     steps: ['Match each load to its lifting plan and destination.', 'Clear the lifting zone and check the load path.', 'Guide the lift, stop for hazards and check its final position.'],
-    keyResult: 'Safe, checked lifts earn the Construction Manager key for the Director.',
+    keyResult: 'Safe, checked lifts earn the Construction Engineer key for the Director.',
     collaboration: 'Coordinate safe access with Safety and delivery timing with Planning.',
     levels: [
       { stars: 1, title: 'Move a service part', issue: 'A service component is waiting at the delivery area.', action: 'Check the lifting plan, clear the zone and guide it to its marked position.' },
@@ -48,7 +48,7 @@ window.ROLES = [
     story: 'Work on a top-down 2D site map. Plan a road diversion for the current construction phase while keeping important access clear.',
     steps: ['Place barriers and route arrows on the map.', 'Keep emergency and work access open.', 'Test the delivery vehicle and adjust the route if needed.'],
     keyResult: 'A tested delivery route earns the Planning key for the Director.',
-    collaboration: 'Tell the Construction Manager when equipment can reach the lifting area.',
+    collaboration: 'Tell the Construction Engineer when equipment can reach the lifting area.',
     levels: [
       { stars: 1, title: 'One closed road', issue: 'A work area blocks the direct route for a waterfall part.', action: 'On the top-down 2D map, place a barrier and arrows, then test the delivery vehicle.' },
       { stars: 2, title: 'Keep access open', issue: 'The next construction phase closes another road near an emergency route.', action: 'Move the barriers and arrows to create a delivery route that keeps emergency access clear, then test it.' },
@@ -84,7 +84,7 @@ window.ROLES = [
     ]
   },
   {
-    slug: 'mep', number: '07', name: 'M&E Coordinator', image: 'assets/role-mep.png',
+    slug: 'mep', number: '07', name: 'M&E Engineer', image: 'assets/role-mep.png',
     hook: 'Connect the systems.',
     challenge: 'The pump and its power and controls need to work together.',
     story: 'Trace the fictional mechanical and electrical connections for a waterfall service. Find the missing connection and check the system before a test.',
@@ -112,12 +112,12 @@ window.ROLES = [
     ]
   },
   {
-    slug: 'architecture', number: '09', name: 'Archi Coordinator', image: 'assets/role-architecture.png',
+    slug: 'architecture', number: '09', name: 'Architect', image: 'assets/role-architecture.png',
     hook: 'Make space for the people and the services.',
     challenge: 'A service access panel conflicts with a finished public space.',
     story: 'Find a way for the fictional waterfall services to be maintained while respecting the design and keeping the public route clear.',
     steps: ['Review the finished space and service access needs.', 'Choose a suitable panel and service route.', 'Check that maintenance and public access remain clear.'],
-    keyResult: 'A checked access solution earns the Archi key for the Director.',
+    keyResult: 'A checked access solution earns the Architect key for the Director.',
     collaboration: 'Coordinate the proposed access with BIM and Safety.',
     levels: [
       { stars: 1, title: 'Hidden access panel', issue: 'A finish covers a panel needed to reach a service valve.', action: 'Choose a panel position that allows the valve to be reached.' },
@@ -132,7 +132,7 @@ window.ROLES = [
     story: 'Inspect a fictional construction route and make it safe for the team. Check every control before reopening access.',
     steps: ['Find hazards at the edge, exit and lifting zone.', 'Choose and place the right safety controls.', 'Recheck the controls and walk the protected route.'],
     keyResult: 'A verified safe route earns the Safety key for the Director.',
-    collaboration: 'Coordinate the lifting zone with the Construction Manager and safe access with Archi.',
+    collaboration: 'Coordinate the lifting zone with the Construction Engineer and safe access with the Architect.',
     levels: [
       { stars: 1, title: 'Blocked exit', issue: 'Materials block the exit on the way to the waterfall work area.', action: 'Identify the obstruction, choose a control and recheck the exit.' },
       { stars: 2, title: 'Unprotected edge', issue: 'A work route passes an edge without protection.', action: 'Select and place the supplied edge protection, then inspect it.' },
