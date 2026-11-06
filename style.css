@@ -196,5 +196,14 @@ p { margin: 0 0 1em; }
 .key-box p:last-child { margin-bottom:0; }
 .collaboration { margin-top:1.5rem; }
 .enlargeable { cursor:zoom-in; }
+.levels-intro { color:var(--muted); }
+.challenge-levels { display:grid; gap:1rem; margin:1.4rem 0 2rem; padding:0; list-style:none; }
+.challenge-level { padding:1.3rem 1.45rem; border:1px solid #c5d0c4; border-left:4px solid #bd9143; background:#fbfbf6; }
+.level-rating { display:flex; align-items:center; flex-wrap:wrap; gap:.7rem; margin:0 0 .9rem; color:#654b1f; font-size:.68rem; font-weight:800; letter-spacing:.09em; }
+.level-stars { color:#9a6d1d; font-size:1.25rem; letter-spacing:.1em; line-height:1; }
+.challenge-level h4 { margin:0 0 .65rem; font-size:1.55rem; }
+.challenge-level p:not(.level-rating) { margin:0 0 .7rem; color:#345047; }
+.challenge-level .level-action:last-child { margin-bottom:0; }
+.level-action strong { color:var(--ink); }
 @media(max-width:900px) { .header-cta { display:none; } .intro-grid,.story-layout { grid-template-columns:1fr; } }
 @media(max-width:600px) { .site-header { padding:1rem 0; } .header-inner { align-items:flex-start; flex-direction:column; gap:.8rem; } .metrics-inner { grid-template-columns:repeat(3,1fr); } .metrics-inner p { grid-column:1/-1; } .hero-index { display:none; } .story-steps { grid-template-columns:1fr; } .footer-inner > div:last-child { text-align:left; } .role-hero { padding-top:11rem; } }
