@@ -9,5 +9,5 @@ Each prompt included: “Use case: stylized-concept. Asset: website illustration
 - `role-sustainability.png`: “A sustainability engineer compares a fictional waterfall water-reuse loop and energy choices on a tablet, beside a pump and simple storage tank, glass roof and tropical greenery visible in the distance. A practical engineering decision.”
 - `role-architecture.png`: “An architectural coordinator checks a proposed service access panel and a concealed pipe route against a drawing in a finished tropical glass-roofed public space, keeping the walkway clear. Visualize maintenance access and design coordination.”
 
-Other role illustrations and the time machine concept are reused from the existing website. The home banner uses an existing in-game capture.
+Other role illustrations and the time machine concept are reused from the existing website. The home banner uses the game main-menu illustration, adapted from the v095 menu artwork; it is not a gameplay capture.
 
