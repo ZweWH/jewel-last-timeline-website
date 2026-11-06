@@ -4,6 +4,8 @@ A standalone website for the proposed construction adventure. The site describes
 
 The static website is served from the repository root. The role content is in `roles.js`; after editing it or the page template, run `node build.mjs` to regenerate `index.html` and the pages in `roles/`. Concept artwork details are in `ARTWORK.md`.
 
+Each role has an illustrated roadmap in `assets/roadmap-<role>.webp`. Five numbered links lead to the matching level descriptions; these are website navigation, not saved game progress. The illustrations are fictional concepts.
+
 The 50-piece jigsaw on the home page uses a numbered 10-column by 5-row concept layout. Each role owns one column and each row corresponds to a level. The illustrated routes are schematic, not verified site plans. The jigsaw drawing is not a 3D-printable model: physical piece dimensions, fitting clearances, thickness, material and print tests will be decided separately.
 
 The original two-option website is maintained in a separate repository.

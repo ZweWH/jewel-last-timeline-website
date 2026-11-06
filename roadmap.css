@@ -1,0 +1,100 @@
+/* Each marker is a real anchor to a level description. The artwork and route
+   are concepts; they deliberately do not depict saved progress or locked levels. */
+.roadmap {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 680px);
+  aspect-ratio: 2 / 3;
+  margin: 2rem auto .8rem;
+  overflow: hidden;
+  border: 2px solid #c7a15c;
+  border-radius: .45rem;
+  background: #183b31;
+  box-shadow: 0 1rem 2.5rem rgba(10, 43, 32, .2);
+}
+.roadmap-art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.roadmap-track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.roadmap-route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.roadmap-route path {
+  fill: none;
+  stroke: #d49c36;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 1 11;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 1px 2px #10251d);
+}
+.roadmap-stop {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(44px, 12%, 78px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 3px solid #f7db8a;
+  border-radius: 50% 50% 43% 43%;
+  background: linear-gradient(160deg, #236f58, #0b332a 74%);
+  color: #fff5d2;
+  box-shadow: 0 3px 0 #a6762f, 0 6px 15px rgba(0,0,0,.65), inset 0 0 0 2px rgba(245,211,134,.5);
+  text-decoration: none;
+  pointer-events: auto;
+  transition: filter .2s ease, box-shadow .2s ease;
+}
+.roadmap-stop:hover,
+.roadmap-stop:focus-visible {
+  color: #fff;
+  filter: brightness(1.2);
+  box-shadow: 0 3px 0 #a6762f, 0 0 0 4px #fff4c4, 0 7px 18px rgba(0,0,0,.65);
+  outline: none;
+}
+.roadmap-number {
+  display: block;
+  font: 800 clamp(1.4rem, 5.8vw, 2.8rem)/1 var(--display, Impact, sans-serif);
+  text-shadow: 0 2px 2px rgba(0,0,0,.6);
+}
+.roadmap-piece {
+  position: absolute;
+  right: -22%;
+  bottom: -4%;
+  display: grid;
+  place-items: center;
+  width: 38%;
+  min-width: 17px;
+  aspect-ratio: 1;
+  border: 1px solid #76510f;
+  border-radius: 30%;
+  background: #eec86e;
+  color: #152f22;
+  font: 700 clamp(.7rem, 2vw, 1rem)/1 sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+.roadmap .stop-1 { left: 36%; top: 84%; }
+.roadmap .stop-2 { left: 65%; top: 68%; }
+.roadmap .stop-3 { left: 38%; top: 50%; }
+.roadmap .stop-4 { left: 65%; top: 34%; }
+.roadmap .stop-5 { left: 55%; top: 19%; }
+.roadmap-caption {
+  width: min(100%, 680px);
+  margin: 0 auto 2rem;
+  color: #405e51;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  .roadmap-stop { transition: none; }
+}
