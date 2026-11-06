@@ -51,10 +51,12 @@
   board.className = 'jigsaw-board';
   board.tabIndex = 0;
   board.setAttribute('aria-label', 'Jigsaw picture, scroll sideways if needed');
-  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece jigsaw of a simplified exterior view of Jewel. Select a piece to see its role and level.'});
+  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece jigsaw of an illustrated exterior view of Jewel with the Woh Hup logo. Select a piece to see its role and level.'});
   const title = svgNode('title'); title.textContent = 'Jewel exterior jigsaw: 50 pieces, ten roles and five levels'; svg.append(title);
   const base = host.dataset.assetBase || '';
-  svg.append(svgNode('image',{href:base+'assets/jigsaw-jewel-exterior-concept.webp',x:0,y:0,width,height,preserveAspectRatio:'xMidYMid slice'}));
+  svg.append(svgNode('image',{href:base+'assets/jigsaw-jewel-exterior-detailed.webp',x:0,y:0,width,height,preserveAspectRatio:'xMidYMid slice'}));
+  // Place the actual logo, including its wordmark, over the artwork and beneath the puzzle pieces.
+  svg.append(svgNode('image',{href:base+'assets/wohhup-official-logo-transparent.png',x:5,y:5,width:65,height:65,'pointer-events':'none','aria-hidden':'true'}));
   const status = document.createElement('p');
   status.className='jigsaw-status';
   status.setAttribute('aria-live','polite');
@@ -77,7 +79,7 @@
     tile.addEventListener('click',()=>display(tile,role,r,number));
     tile.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();display(tile,role,r,number);}});
     svg.append(tile);
-    const num=svgNode('text',{x:c*cell+50,y:r*cell+54,class:'jigsaw-number','text-anchor':'middle','aria-hidden':'true'});
+    const num=svgNode('text',{x:r===0&&c===0 ? 16 : c*cell+50,y:r===0&&c===0 ? 92 : r*cell+54,class:'jigsaw-number','text-anchor':'middle','aria-hidden':'true'});
     num.textContent=String(number).padStart(2,'0'); svg.append(num);
   }
   board.append(svg);
