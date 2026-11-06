@@ -1,0 +1,13 @@
+.jigsaw-board { overflow-x:auto; border:1px solid rgba(225,193,124,.65); background:#061d1a; box-shadow:0 1rem 3rem rgba(0,0,0,.2); }
+.story .section-heading > p { color:#c5d4cb; }
+.jigsaw-svg { display:block; width:100%; min-width:760px; height:auto; }
+.jigsaw-piece { fill:rgba(4,30,24,.06); stroke:#f4e4bc; stroke-width:2.2; vector-effect:non-scaling-stroke; cursor:pointer; transition:fill .15s ease,stroke .15s ease; }
+.jigsaw-piece:hover,.jigsaw-piece:focus-visible,.jigsaw-piece.is-selected { fill:rgba(225,174,63,.40); stroke:#fff3c9; stroke-width:3; outline:none; }
+.jigsaw-number { fill:#fff; stroke:rgba(0,0,0,.8); stroke-width:3px; paint-order:stroke fill; font:700 15px/1 system-ui,sans-serif; pointer-events:none; }
+.jigsaw-status { margin:1rem 0; min-height:2rem; color:#f4e8c8; font-size:1rem; font-weight:700; }
+.jigsaw-disclaimer { margin:1.5rem 0 0; color:#c5d4cb; font-size:.85rem; }
+.jigsaw-legend { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.55rem 1.1rem; padding:0; margin:1.5rem 0 0; list-style:none; color:#d9e6d7; font-size:.78rem; }
+.jigsaw-legend li { padding:.5rem 0; border-top:1px solid rgba(255,255,255,.18); }
+@media(max-width:900px) { .jigsaw-legend { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:500px) { .jigsaw-svg { min-width:700px; } .jigsaw-status { font-size:.9rem; } }
+@media(prefers-reduced-motion:reduce) { .jigsaw-piece { transition:none; } }

@@ -1,0 +1,112 @@
+/* Proposed routes, not real site plans. The ordered lists keep the journey
+   understandable with CSS disabled and to assistive technology. */
+.level-path { --path-green: #16483d; --path-gold: #bd8b38; --path-pale: #e4ede1; margin-top: 2.5rem; }
+.level-path .path-intro { max-width: 42rem; color: #405e51; }
+.level-path .path-progress {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .25rem;
+  margin: 1.6rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  isolation: isolate;
+}
+.level-path .path-progress::before {
+  position: absolute;
+  z-index: -1;
+  top: 1.2rem;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  content: '';
+  background: repeating-linear-gradient(90deg, #9baf9f 0 8px, transparent 8px 13px);
+}
+.level-path .path-progress li { min-width: 0; text-align: center; }
+.level-path .path-progress a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  color: #294c3e;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.level-path .path-dot {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #d5b46d;
+  border-radius: 50%;
+  background: var(--path-green);
+  color: #fff6d9;
+  font: 800 1rem/1 var(--sans, sans-serif);
+  transition: background .2s ease, transform .2s ease;
+}
+.level-path .path-progress a:hover .path-dot,
+.level-path .path-progress a:focus-visible .path-dot { background: #28674f; transform: translateY(-3px); }
+.level-path .path-progress a:focus-visible { outline: 3px solid #a67017; outline-offset: 4px; }
+.level-path .level-list { display: grid; gap: 1.2rem; margin: 0; padding: 0; list-style: none; }
+.level-path .level-card {
+  position: relative;
+  min-width: 0;
+  padding: clamp(1.15rem, 3vw, 1.65rem);
+  border: 1px solid #c5d3c4;
+  border-left: 4px solid var(--path-gold);
+  background: #fbfbf5;
+  scroll-margin-top: 2rem;
+}
+.level-path .level-topline { display: flex; justify-content: space-between; align-items: center; gap: .65rem; flex-wrap: wrap; margin-bottom: .85rem; }
+.level-path .level-number { color: #735423; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.level-path .piece-award { display: inline-block; padding: .35rem .6rem; border: 1px solid #c8b37f; color: #624a1d; background: #f7edce; font-size: .66rem; font-weight: 800; letter-spacing: .05em; line-height: 1.25; text-transform: uppercase; }
+.level-path .level-card h4 { margin: 0 0 .7rem; color: #12382f; font-size: clamp(1.45rem, 2vw, 1.9rem); }
+.level-path .level-card > p { max-width: none; margin: 0 0 .7rem; color: #345047; font-size: .94rem; }
+.level-path .level-card > p strong { color: #102d29; }
+.level-path .level-map {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #bed0c1;
+  background-color: #e8f0e6;
+  background-image: linear-gradient(#cadccc 1px, transparent 1px), linear-gradient(90deg, #cadccc 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.level-path .level-map-label { margin: 0 0 .25rem; color: #456858; font-size: .62rem; font-weight: 800; letter-spacing: .14em; line-height: 1.35; text-transform: uppercase; }
+.level-path .level-map-location { margin: 0 0 .85rem; color: #183b31; font-size: .81rem; font-weight: 700; line-height: 1.4; }
+.level-path .level-map-route { display: flex; align-items: center; gap: .25rem; justify-content: space-between; }
+.level-path .level-map-node {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  flex: 1 1 0;
+  min-height: 3.3rem;
+  padding: .4rem .35rem;
+  border: 1px solid #8baa98;
+  border-radius: .25rem;
+  background: #f8fbf3;
+  color: #173d31;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.level-path .level-map-node:nth-of-type(3) { border-color: #c4a35e; background: #fff7d8; }
+.level-path .level-map-node:nth-of-type(5) { border-color: #678e73; background: #d6e9d5; }
+.level-path .level-map-arrow { flex: 0 0 auto; color: #89631f; font-size: 1.2rem; font-weight: 800; line-height: 1; }
+@media (max-width: 480px) {
+  .level-path .path-progress a { font-size: .58rem; letter-spacing: 0; }
+  .level-path .path-dot { width: 2.15rem; height: 2.15rem; font-size: .85rem; }
+  .level-path .path-progress::before { top: 1.02rem; }
+  .level-path .level-card { padding: 1rem; }
+  .level-path .level-map { padding: .75rem; }
+  .level-path .level-map-node { min-height: 3rem; padding-inline: .18rem; font-size: .63rem; }
+  .level-path .level-map-arrow { font-size: .95rem; }
+}
+@media (prefers-reduced-motion: reduce) { .level-path .path-dot { transition: none; } }
