@@ -1,6 +1,7 @@
 .jigsaw-board { overflow-x:auto; border:1px solid rgba(225,193,124,.65); background:#061d1a; box-shadow:0 1rem 3rem rgba(0,0,0,.2); }
 .story .section-heading > p { color:#c5d4cb; }
 .jigsaw-svg { display:block; width:100%; min-width:760px; height:auto; }
+.jigsaw-outline { fill:none; stroke:#17372e; stroke-width:5; vector-effect:non-scaling-stroke; pointer-events:none; }
 .jigsaw-piece { fill:rgba(4,30,24,.06); stroke:#f4e4bc; stroke-width:2.2; vector-effect:non-scaling-stroke; cursor:pointer; transition:fill .15s ease,stroke .15s ease; }
 .jigsaw-piece:hover,.jigsaw-piece:focus-visible,.jigsaw-piece.is-selected { fill:rgba(225,174,63,.40); stroke:#fff3c9; stroke-width:3; outline:none; }
 .jigsaw-number { fill:#fff; stroke:rgba(0,0,0,.8); stroke-width:3px; paint-order:stroke fill; font:700 15px/1 system-ui,sans-serif; pointer-events:none; }

@@ -51,10 +51,10 @@
   board.className = 'jigsaw-board';
   board.tabIndex = 0;
   board.setAttribute('aria-label', 'Jigsaw picture, scroll sideways if needed');
-  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece Jewel jigsaw. Select a piece to see its role and level.'});
-  const title = svgNode('title'); title.textContent = 'Jewel jigsaw: 50 pieces, ten roles and five levels'; svg.append(title);
+  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece jigsaw of a simplified exterior view of Jewel. Select a piece to see its role and level.'});
+  const title = svgNode('title'); title.textContent = 'Jewel exterior jigsaw: 50 pieces, ten roles and five levels'; svg.append(title);
   const base = host.dataset.assetBase || '';
-  svg.append(svgNode('image',{href:base+'assets/jewel-game-menu-art-v095.webp',x:0,y:0,width,height,preserveAspectRatio:'xMidYMid slice'}));
+  svg.append(svgNode('image',{href:base+'assets/jigsaw-jewel-exterior-concept.webp',x:0,y:0,width,height,preserveAspectRatio:'xMidYMid slice'}));
   const status = document.createElement('p');
   status.className='jigsaw-status';
   status.setAttribute('aria-live','polite');
@@ -70,6 +70,7 @@
     const role=roles[c], number=c*rows+r+1;
     const points=[...hEdges[r][c],...vEdges[c+1][r].slice(1),...[...hEdges[r+1][c]].reverse().slice(1),...[...vEdges[c][r]].reverse().slice(1)];
     const d=points.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(3)},${p[1].toFixed(3)}`).join(' ')+' Z';
+    svg.append(svgNode('path',{d,class:'jigsaw-outline','aria-hidden':'true'}));
     const label=`Piece ${number} of 50. ${role.name}, level ${r+1}${role.levels?.[r]?.title ? ': '+role.levels[r].title : ''}.`;
     const tile=svgNode('path',{d,class:'jigsaw-piece',tabindex:'0',role:'button','aria-label':label});
     const tileTitle=svgNode('title'); tileTitle.textContent=label; tile.append(tileTitle);
