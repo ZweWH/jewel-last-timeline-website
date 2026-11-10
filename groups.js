@@ -1,0 +1,128 @@
+/* Five proposed two-player mission paths. These are concepts, not finished gameplay. */
+window.GROUPS = [
+  {
+    slug: 'bim-technical', number: '01',
+    name: 'BIM Engineer + Technical Engineer',
+    roles: ['bim', 'technical'],
+    hook: 'Find the clash. Check the details. Agree on a fix.',
+    challenge: 'A waterfall service route clashes with other services and its details do not match.',
+    story: 'In an imagined Jewel basement, the BIM Engineer explores the overhead services in Shrink Jetpack mode while the Technical Engineer checks the supplied drawings and equipment information. Together they agree on a clear, workable route.',
+    levels: [
+      { level: 1, title: 'Pipe meets duct', issue: 'A waterfall pipe crosses an air duct.', location: 'Imagined basement corridor',
+        actions: [{role:'bim',text:'Use Shrink Jetpack mode to find the clash and suggest a clear pipe route.'},{role:'technical',text:'Check the supplied drawing and confirm the suggested route matches the pipe details.'}],
+        map: ['Find the clash','Check the drawing','Agree on a route'] },
+      { level: 2, title: 'Route through a beam', issue: 'The next route passes through a support beam.', location: 'Imagined service bay',
+        actions: [{role:'bim',text:'Inspect the beam and choose a route around it.'},{role:'technical',text:'Compare the proposed pipe size and route with the supplied drawing.'}],
+        map: ['Inspect the beam','Compare details','Choose a clear route'] },
+      { level: 3, title: 'Cable and pipe', issue: 'A cable tray and a water pipe use the same space.', location: 'Imagined overhead corridor',
+        actions: [{role:'bim',text:'Find the overlap and propose a separate tray route.'},{role:'technical',text:'Check the service labels and supplied route notes with your teammate.'}],
+        map: ['Find the overlap','Check the labels','Separate services'] },
+      { level: 4, title: 'Valve access', issue: 'A proposed pipe route blocks access to a valve.', location: 'Imagined valve bay',
+        actions: [{role:'bim',text:'Inspect the valve and select a route with room for access.'},{role:'technical',text:'Check the valve tag and access note against the supplied record.'}],
+        map: ['Find blocked access','Check the valve','Keep access clear'] },
+      { level: 5, title: 'Final route check', issue: 'An older drawing conflicts with the revised service route.', location: 'Imagined coordination room',
+        actions: [{role:'bim',text:'Review the revised route and flag any remaining clash.'},{role:'technical',text:'Find the latest drawing and confirm the matching pipe and pump details.'}],
+        map: ['Review the route','Check the revision','Share the agreed plan'] }
+    ]
+  },
+  {
+    slug: 'construction-safety', number: '02',
+    name: 'Construction Engineer + Safety Engineer',
+    roles: ['construction', 'safety'],
+    hook: 'Plan the lift. Protect the team.',
+    challenge: 'Waterfall service equipment must be lifted into place while the work area stays safe.',
+    story: 'In an imagined work yard, the Construction Engineer plans and guides the lifts while the Safety Engineer checks the route and protects the lifting zone. Both must agree the area is ready before each lift.',
+    levels: [
+      { level: 1, title: 'Clear the delivery area', issue: 'A service part is waiting beside a blocked exit.', location: 'Imagined delivery yard',
+        actions: [{role:'construction',text:'Identify the load and mark its destination for the first lift.'},{role:'safety',text:'Find the blocked exit, choose a control and recheck the route.'}],
+        map: ['Check the load','Clear the exit','Prepare the lift'] },
+      { level: 2, title: 'Protect the edge', issue: 'The pump route passes an unprotected edge.', location: 'Imagined pump yard',
+        actions: [{role:'construction',text:'Choose a clear path to the marked pump position.'},{role:'safety',text:'Place the supplied edge protection and confirm the route is safe.'}],
+        map: ['Plan the route','Protect the edge','Move the pump'] },
+      { level: 3, title: 'Lift the pipe section', issue: 'A long service section must pass through a narrow work area.', location: 'Imagined service entrance',
+        actions: [{role:'construction',text:'Guide the pipe section along the marked route to its supports.'},{role:'safety',text:'Set the exclusion zone and keep the walking route clear.'}],
+        map: ['Mark the zone','Guide the pipe','Reach the supports'] },
+      { level: 4, title: 'Stop an unsafe lift', issue: 'A person enters the marked lifting zone.', location: 'Imagined lifting bay',
+        actions: [{role:'construction',text:'Stop the lift and wait for the all-clear before continuing.'},{role:'safety',text:'Clear the zone, check its barriers and signal when it is safe.'}],
+        map: ['Stop the lift','Clear the zone','Resume safely'] },
+      { level: 5, title: 'Lifts against the clock', issue: 'Several service parts must reach their marked positions within the given time.', location: 'Imagined equipment yard',
+        actions: [{role:'construction',text:'Choose the order and guide each load to its destination.'},{role:'safety',text:'Check the zone for each lift and stop work if access becomes unsafe.'}],
+        map: ['Choose the order','Check each zone','Complete the lifts'] }
+    ]
+  },
+  {
+    slug: 'planning-quantity', number: '03',
+    name: 'Planning Engineer + Quantity Surveyor',
+    roles: ['planning', 'quantity'],
+    hook: 'Plan the route. Make sure the parts and budget match.',
+    challenge: 'Roadworks and missing materials could delay the waterfall equipment delivery.',
+    story: 'On an imagined top-down site map, the Planning Engineer arranges diversions while the Quantity Surveyor checks the parts and their supplied costs. Together they test the route and make sure the delivery is complete.',
+    levels: [
+      { level: 1, title: 'First delivery', issue: 'A closed road blocks a delivery of service fittings.', location: 'Imagined site entrance',
+        actions: [{role:'planning',text:'Place a barrier and route arrows, then test the delivery vehicle.'},{role:'quantity',text:'Count the fittings on the supplied drawing and check the delivery list.'}],
+        map: ['Count the fittings','Set the diversion','Test delivery'] },
+      { level: 2, title: 'Pipe route and cost', issue: 'The next road closure changes the route for a pipe delivery.', location: 'Imagined site junction',
+        actions: [{role:'planning',text:'Adjust the diversion while keeping emergency access open.'},{role:'quantity',text:'Measure the pipe run on the supplied plan and price it using the given rate.'}],
+        map: ['Measure the pipe','Keep access open','Deliver the pipe'] },
+      { level: 3, title: 'Two deliveries', issue: 'Two equipment deliveries must share a narrow road.', location: 'Imagined narrow road',
+        actions: [{role:'planning',text:'Set the route and choose a safe order for the two test vehicles.'},{role:'quantity',text:'Check the equipment schedule and identify any missing pump.'}],
+        map: ['Check the schedule','Order the vehicles','Reach the work area'] },
+      { level: 4, title: 'Changed work area', issue: 'A new work area changes the route and adds pipe parts.', location: 'Imagined site crossing',
+        actions: [{role:'planning',text:'Revise the diversion and protect the pedestrian crossing.'},{role:'quantity',text:'Update the part quantities and calculate the change using supplied rates.'}],
+        map: ['Revise the route','Update quantities','Check the change'] },
+      { level: 5, title: 'Pump delivery plan', issue: 'The final pump delivery needs a clear route and a complete package within the training budget.', location: 'Imagined pump yard',
+        actions: [{role:'planning',text:'Adjust the phase map and test the pump delivery vehicle.'},{role:'quantity',text:'Compare the supplied quotes and select a complete package within budget.'}],
+        map: ['Choose the package','Test the route','Confirm delivery'] }
+    ]
+  },
+  {
+    slug: 'mep-qaqc', number: '04',
+    name: 'M&E Engineer + QAQC Engineer',
+    roles: ['mep', 'qaqc'],
+    hook: 'Connect it. Inspect it. Test it together.',
+    challenge: 'A fictional waterfall service needs correct connections and a careful inspection before testing.',
+    story: 'In an imagined service bay, the M&E Engineer checks the water, power and control connections while the QAQC Engineer looks for installation defects. They compare the supplied records and recheck each fix together.',
+    levels: [
+      { level: 1, title: 'Valve and seal', issue: 'A valve is missing and a nearby service opening has an incomplete seal.', location: 'Imagined service bay',
+        actions: [{role:'mep',text:'Trace the marked pipe and select the matching valve for the gap.'},{role:'qaqc',text:'Find the incomplete seal, choose the supplied fix and reinspect it.'}],
+        map: ['Find the valve gap','Check the seal','Reinspect the bay'] },
+      { level: 2, title: 'Leaking connection', issue: 'A fictional pipe joint leaks during inspection.', location: 'Imagined pipe bay',
+        actions: [{role:'mep',text:'Trace the affected connection and choose the matching repair from the supplied options.'},{role:'qaqc',text:'Identify the leak and recheck the joint after the repair.'}],
+        map: ['Locate the leak','Choose the repair','Recheck the joint'] },
+      { level: 3, title: 'Pump and its tag', issue: 'The pump connection and identification need checking.', location: 'Imagined pump bay',
+        actions: [{role:'mep',text:'Follow the diagram and match the pump to the correct power connection.'},{role:'qaqc',text:'Compare the pump tag with the supplied record and select the correct tag.'}],
+        map: ['Check the pump','Match its tag','Confirm connections'] },
+      { level: 4, title: 'Support and direction', issue: 'A pipe support is loose and a valve faces against the indicated flow.', location: 'Imagined overhead bay',
+        actions: [{role:'mep',text:'Compare the valve orientation with the supplied flow diagram.'},{role:'qaqc',text:'Find the loose support, choose the supplied fix and reinspect it.'}],
+        map: ['Check the valve','Inspect the support','Recheck both'] },
+      { level: 5, title: 'Ready for a test', issue: 'The pump does not respond to the fictional test control.', location: 'Imagined test station',
+        actions: [{role:'mep',text:'Trace the sensor and control links, select the correction and run the test.'},{role:'qaqc',text:'Compare the checked connections with the supplied record and confirm the reinspection.'}],
+        map: ['Trace controls','Check the records','Run the test'] }
+    ]
+  },
+  {
+    slug: 'sustainability-architect', number: '05',
+    name: 'Sustainability Engineer + Architect',
+    roles: ['sustainability', 'architecture'],
+    hook: 'Save resources. Make room for people and services.',
+    challenge: 'The waterfall service needs a balanced plan that fits its surroundings and stays accessible.',
+    story: 'In fictional Jewel spaces, the Sustainability Engineer compares water, energy and material choices while the Architect checks access and the public route. Together they choose options that meet the supplied targets and fit the design.',
+    levels: [
+      { level: 1, title: 'Water loss and access', issue: 'A water-use report shows waste, but a finish hides the service valve.', location: 'Imagined service wall',
+        actions: [{role:'sustainability',text:'Compare the supplied report and choose a way to reduce water loss.'},{role:'architecture',text:'Choose an access panel position that lets the team reach the valve.'}],
+        map: ['Review water use','Find the valve','Keep access clear'] },
+      { level: 2, title: 'Reuse route', issue: 'A proposed water reuse pipe crosses a finished wall feature.', location: 'Imagined public corridor',
+        actions: [{role:'sustainability',text:'Select a reuse option that meets the supplied conditions.'},{role:'architecture',text:'Choose a route that fits the wall feature and the chosen service.'}],
+        map: ['Choose reuse','Review the wall','Agree on a route'] },
+      { level: 3, title: 'Energy and clearance', issue: 'The pump setting must meet the flow target and the service cover needs room to open.', location: 'Imagined ceiling zone',
+        actions: [{role:'sustainability',text:'Compare the supplied energy and flow figures and select a suitable pump setting.'},{role:'architecture',text:'Compare the layouts and select one with clearance to open the service cover.'}],
+        map: ['Compare settings','Check the cover','Agree on the layout'] },
+      { level: 4, title: 'Materials and screen', issue: 'The equipment needs a suitable screen and access for maintenance.', location: 'Imagined garden edge',
+        actions: [{role:'sustainability',text:'Compare the supplied material options for waste and maintenance.'},{role:'architecture',text:'Choose a screen layout that fits the selected material and keeps access clear.'}],
+        map: ['Compare materials','Place the screen','Check access'] },
+      { level: 5, title: 'A balanced plan', issue: 'The lowest-energy option misses the flow target and a panel opens into a public route.', location: 'Imagined public walkway',
+        actions: [{role:'sustainability',text:'Choose a water and energy plan that meets the supplied flow target.'},{role:'architecture',text:'Select a panel and walkway layout that keeps maintenance and public access clear.'}],
+        map: ['Balance the plan','Clear the walkway','Share the solution'] }
+    ]
+  }
+];

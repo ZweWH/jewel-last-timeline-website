@@ -1,3 +1,4 @@
+/* Role identities and artwork; legacy solo level ideas are retained for reference only. Shared missions are defined in groups.js. */
 window.ROLES = [
   {
     slug: 'bim', number: '01', name: 'BIM Engineer', image: 'assets/role-bim-engineer.png',

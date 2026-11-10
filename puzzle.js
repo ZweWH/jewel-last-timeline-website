@@ -3,11 +3,15 @@
   const host = document.querySelector('[data-jigsaw]');
   if (!host) return;
   const roles = window.ROLES;
-  if (!Array.isArray(roles) || roles.length !== 10) {
+  const groups = window.GROUPS;
+  if (!Array.isArray(roles) || roles.length !== 10 || !Array.isArray(groups) || groups.length !== 5 ||
+      groups.some(group => !Array.isArray(group.roles) || !Array.isArray(group.levels) || group.levels.length !== 5) ||
+      roles.some(role => groups.filter(group => group.roles.includes(role.slug)).length !== 1)) {
     host.textContent = 'The puzzle map could not be loaded.';
     return;
   }
 
+  const groupForRole = role => groups.find(group => group.roles.includes(role.slug));
   const NS = 'http://www.w3.org/2000/svg';
   const svgNode = (tag, attributes = {}) => {
     const node = document.createElementNS(NS, tag);
@@ -65,15 +69,17 @@
   const display = (tile, role, row, number) => {
     if (selected) selected.classList.remove('is-selected');
     tile.classList.add('is-selected'); selected=tile;
-    const level = role.levels?.[row];
-    status.textContent = `Piece ${String(number).padStart(2,'0')} of 50 · ${role.name} · Level ${row+1}${level?.title ? ' — '+level.title : ''}`;
+    const group = groupForRole(role);
+    const level = group.levels[row];
+    status.textContent = `Piece ${String(number).padStart(2,'0')} of 50 · ${role.name} · ${group.name} · Level ${row+1}${level?.title ? ' — '+level.title : ''}`;
   };
   for (let r=0;r<rows;r++) for (let c=0;c<columns;c++) {
     const role=roles[c], number=c*rows+r+1;
     const points=[...hEdges[r][c],...vEdges[c+1][r].slice(1),...[...hEdges[r+1][c]].reverse().slice(1),...[...vEdges[c][r]].reverse().slice(1)];
     const d=points.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(3)},${p[1].toFixed(3)}`).join(' ')+' Z';
     svg.append(svgNode('path',{d,class:'jigsaw-outline','aria-hidden':'true'}));
-    const label=`Piece ${number} of 50. ${role.name}, level ${r+1}${role.levels?.[r]?.title ? ': '+role.levels[r].title : ''}.`;
+    const group=groupForRole(role), level=group.levels[r];
+    const label=`Piece ${number} of 50. ${role.name}, ${group.name}, level ${r+1}${level?.title ? ': '+level.title : ''}.`;
     const tile=svgNode('path',{d,class:'jigsaw-piece',tabindex:'0',role:'button','aria-label':label});
     const tileTitle=svgNode('title'); tileTitle.textContent=label; tile.append(tileTitle);
     tile.addEventListener('click',()=>display(tile,role,r,number));
