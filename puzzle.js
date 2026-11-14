@@ -55,8 +55,8 @@
   board.className = 'jigsaw-board';
   board.tabIndex = 0;
   board.setAttribute('aria-label', 'Jigsaw picture, scroll sideways if needed');
-  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece jigsaw of an illustrated exterior view of Jewel with the Woh Hup logo. Select a piece to see its role and level.'});
-  const title = svgNode('title'); title.textContent = 'Jewel exterior jigsaw: 50 pieces, ten roles and five levels'; svg.append(title);
+  const svg = svgNode('svg', {viewBox:`0 0 ${width} ${height}`,class:'jigsaw-svg',role:'group','aria-label':'Fifty-piece jigsaw of an illustrated exterior view of Jewel with the Woh Hup logo. Select a piece to see its role and checkpoint.'});
+  const title = svgNode('title'); title.textContent = 'Jewel exterior jigsaw: 50 pieces, ten roles and five checkpoints'; svg.append(title);
   const base = host.dataset.assetBase || '';
   svg.append(svgNode('image',{href:base+'assets/jigsaw-jewel-exterior-detailed.webp',x:0,y:0,width,height,preserveAspectRatio:'xMidYMid slice'}));
   // Place the actual logo, including its wordmark, over the artwork and beneath the puzzle pieces.
@@ -64,14 +64,14 @@
   const status = document.createElement('p');
   status.className='jigsaw-status';
   status.setAttribute('aria-live','polite');
-  status.textContent='Select a piece to see which role and level earns it.';
+  status.textContent='Select a piece to see which role and checkpoint earns it.';
   let selected;
   const display = (tile, role, row, number) => {
     if (selected) selected.classList.remove('is-selected');
     tile.classList.add('is-selected'); selected=tile;
     const group = groupForRole(role);
     const level = group.levels[row];
-    status.textContent = `Piece ${String(number).padStart(2,'0')} of 50 · ${role.name} · ${group.name} · Level ${row+1}${level?.title ? ' — '+level.title : ''}`;
+    status.textContent = `Piece ${String(number).padStart(2,'0')} of 50 · ${role.name} · ${group.name} · Checkpoint ${row+1}${level?.title ? ' — '+level.title : ''}`;
   };
   for (let r=0;r<rows;r++) for (let c=0;c<columns;c++) {
     const role=roles[c], number=c*rows+r+1;
@@ -79,7 +79,7 @@
     const d=points.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(3)},${p[1].toFixed(3)}`).join(' ')+' Z';
     svg.append(svgNode('path',{d,class:'jigsaw-outline','aria-hidden':'true'}));
     const group=groupForRole(role), level=group.levels[r];
-    const label=`Piece ${number} of 50. ${role.name}, ${group.name}, level ${r+1}${level?.title ? ': '+level.title : ''}.`;
+    const label=`Piece ${number} of 50. ${role.name}, ${group.name}, checkpoint ${r+1}${level?.title ? ': '+level.title : ''}.`;
     const tile=svgNode('path',{d,class:'jigsaw-piece',tabindex:'0',role:'button','aria-label':label});
     const tileTitle=svgNode('title'); tileTitle.textContent=label; tile.append(tileTitle);
     tile.addEventListener('click',()=>display(tile,role,r,number));
