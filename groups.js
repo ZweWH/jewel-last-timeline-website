@@ -8,113 +8,113 @@ window.GROUPS = [
       "bim",
       "technical"
     ],
-    "hook": "Find the clash. Share clues. Restore the route.",
-    "challenge": "A fictional waterfall pipe clashes with other services.",
-    "story": "In an imagined basement, the BIM Engineer explores overhead services using a proposed Shrink Jetpack, while the Technical Engineer checks drawings and specifications. The pair share different clues, agree on a route and test it.",
+    "hook": "Find five clashes. Design a route. Bring the flow back.",
+    "challenge": "Five clashes block a fictional waterfall water pipe.",
+    "story": "The pair travel from the Jewel atrium to a planned Revit-designed pump room and service area. The BIM Engineer shrinks and flies above the ceiling to find the clashes. The Technical Engineer follows on foot and designs each new pipe route on a wall screen. Together, they repair the route and test the flow.",
     "levels": [
       {
         "level": 1,
-        "title": "Read the warning",
-        "issue": "A service route is blocked.",
-        "location": "Fictional training setting",
+        "title": "First repair",
+        "issue": "A water pipe crosses an air duct. A guided first clash introduces a simple elbow and route.",
+        "location": "Pump-room service corridor · planned fictional environment",
         "actions": [
           {
             "role": "bim",
-            "text": "Find the warning in the model."
+            "text": "Shrink, fly to the pipe and show your teammate where the duct blocks it."
           },
           {
             "role": "technical",
-            "text": "Check the latest supplied drawing."
+            "text": "Read the supplied drawing, choose the pipe and elbow, and arrange the route on the screen."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Find the duct",
+          "Plan an elbow",
+          "Place and test"
         ]
       },
       {
         "level": 2,
-        "title": "Find the clash",
-        "issue": "Two services occupy the same space.",
-        "location": "Fictional training setting",
+        "title": "Choose the right pipe",
+        "issue": "A new route needs the correct pipe size and material, plus more than one fitting.",
+        "location": "Service corridor · planned fictional environment",
         "actions": [
           {
             "role": "bim",
-            "text": "Inspect and mark the clash."
+            "text": "Inspect the space above the ceiling and place the agreed pieces."
           },
           {
             "role": "technical",
-            "text": "Identify the conflicting services from their labels."
+            "text": "Compare the fictional specification with the choices, then design the route with the matching fittings."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Check the space",
+          "Choose pipe and fittings",
+          "Install and test"
         ]
       },
       {
         "level": 3,
-        "title": "Compare routes",
-        "issue": "Possible routes have different drawbacks.",
-        "location": "Fictional training setting",
+        "title": "Two obstacles",
+        "issue": "A duct and cable tray both block the water pipe.",
+        "location": "Overhead service crossing · planned fictional environment",
         "actions": [
           {
             "role": "bim",
-            "text": "Preview the routes and report clearance problems."
+            "text": "Find both obstacles and describe the space between them."
           },
           {
             "role": "technical",
-            "text": "Check the supplied sizes and access notes."
+            "text": "Use the wall screen to route the chosen pipe and fittings around both obstacles."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Find both obstacles",
+          "Design a clear route",
+          "Build and test"
         ]
       },
       {
         "level": 4,
-        "title": "Agree on a fix",
-        "issue": "One route must satisfy both sets of clues.",
-        "location": "Fictional training setting",
+        "title": "Keep access clear",
+        "issue": "One possible route blocks access to equipment.",
+        "location": "Equipment access area · planned fictional environment",
         "actions": [
           {
             "role": "bim",
-            "text": "Select the agreed route."
+            "text": "Spot the access point above the ceiling and tell your teammate which route blocks it."
           },
           {
             "role": "technical",
-            "text": "Confirm it against the supplied specifications."
+            "text": "Revise the section-view route to keep the equipment accessible."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Inspect access",
+          "Revise the route",
+          "Check clearance"
         ]
       },
       {
         "level": 5,
-        "title": "Test the route",
-        "issue": "A simulated flow check reveals any remaining gap.",
-        "location": "Fictional training setting",
+        "title": "Final connection",
+        "issue": "A tight service area combines pipe selection, fittings, clearance and access.",
+        "location": "Pump-room connection · planned fictional environment",
         "actions": [
           {
             "role": "bim",
-            "text": "Inspect highlighted problems in the model."
+            "text": "Inspect the tight space and install the agreed pieces in their positions."
           },
           {
             "role": "technical",
-            "text": "Review the test result and confirm the handover."
+            "text": "Use the drawing and your teammate’s clues to complete the final route on the screen."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Share final clues",
+          "Complete the route",
+          "Test the flow"
         ]
       }
     ],
