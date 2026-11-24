@@ -46,3 +46,12 @@ For Quantity Surveyor, M&E, Sustainability, Architect, and Safety, the common pr
 - Sustainability: “A water and energy sustainability level map with top-down rainwater collection tanks, recycling stations, water pipes, solar panels and green landscaped pockets.”
 - Architect: “An architectural coordination site map with overhead walls, rooms, access panels, equipment clearances, ceiling plan areas and pedestrian paths.”
 - Safety: “A construction safety inspection site map with overhead barriers, marked lifting zone, open edge protection, cable trip hazards, an emergency exit route and safety signs as symbols only.”
+
+## Storytelling visual direction (November 2026)
+
+The built-in image generation tool created two illustrative concepts for the website, not game captures. The older sketch-style roadmap and mission illustrations remain in use.
+
+- assets/jewel-mystery-story-v1.png: painted Jewel-inspired stopped waterfall and train bridge, quiet time-travel glow, two engineers, dark negative space. Reference: the previous website menu illustration.
+- assets/bim-pair-mystery-v1.png: an illustrated, serious engineering pair investigating overhead services, with amber time-travel light. Reference: the current game pair-loading poster. This is a visual concept and is not evidence of implemented game lighting or multiplayer gameplay.
+
+Prompts asked for original, mysterious story-driven illustration with charcoal, muted green and warm gold; recognizable reference characters, determined expressions, and no text or franchise assets.

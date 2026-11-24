@@ -1,0 +1,46 @@
+
+:root{color-scheme:dark;--ink:#e5eae4;--deep:#0a1012;--green:#243a34;--gold:#e5c785;--cream:#121b1b;--soft:#202e2b;--muted:#bbc7c0}
+body{background:#101717;color:var(--ink)}
+.intro,.role-detail,.roles-section{background:#121b1b;color:var(--ink)}
+.intro{background:radial-gradient(ellipse at 80% 10%,#23342f 0%,#121b1b 60%)}
+.roles-section,.level-path{background:#10191a}
+.eyebrow,.group-card-content .eyebrow{color:#d6c28f}
+h2 em,.hero h1 span{color:#e0be79}
+.hero::before{background:linear-gradient(90deg,rgba(5,11,13,.9) 0%,rgba(5,11,13,.48) 48%,rgba(5,11,13,.12) 100%),linear-gradient(0deg,rgba(5,11,13,.92),transparent 55%),linear-gradient(180deg,rgba(5,11,13,.5),transparent 30%)}
+.role-hero::before{background:linear-gradient(90deg,rgba(7,13,15,.97),rgba(7,13,15,.8) 60%,rgba(7,13,15,.4)),linear-gradient(0deg,rgba(7,13,15,.9),transparent 70%)}
+.metrics{background:#1c2d29}
+.story{background:#0a1012}.team,.next-role{background:#182320}
+.director-panel{background:#21362e}.footer{background:#080e0f}
+.section-heading>p,.section-heading>div>p:not(.eyebrow),.section-note,.role-art figcaption,.level-path .path-intro,.roadmap-caption{color:#bdcbc2}
+.notice,.director-panel .notice,.key-box{background:#25352f;color:#e4ece3;border-color:#c6a45f}
+.director-panel .notice{color:#e4ece3}
+.group-card{background:#1c2c28;border-color:#45584d;color:#eef2eb}
+.group-card-content h3{color:#f2f2e8}
+.group-card-content p:not(.eyebrow){color:#c3d0c6}
+.group-card-content .card-link,.card-link{color:#f1d49a}
+.group-members>*{background:#283d34;border-color:#5a7462;color:#e4eee4}
+.group-action{background:#253a32;border-color:#556d5c;border-top-color:#d3b074}
+.group-action h4,.group-action h5,.group-action strong{color:#f3d596}
+.group-action p{color:#e0e9e0}
+.level-path .level-card,.bim-guide .level-card{background:#1d2b28;border:1px solid #4c6256;border-left:4px solid #c2a265;color:#eaf0e8}
+.level-path .level-card h4,.level-path .level-card>p strong{color:#f0f4eb}
+.level-path .level-card>p{color:#d8e4da}
+.level-path .level-number{color:#e4c889}
+.level-path .piece-award{background:#403923;border-color:#b69b61;color:#f7e6ba}
+.level-path .level-map{background-color:#253833;background-image:linear-gradient(#344b41 1px,transparent 1px),linear-gradient(90deg,#344b41 1px,transparent 1px);border-color:#576f60}
+.level-path .level-map-label{color:#c5d8c5}
+.level-path .level-map-location{color:#f1f4ec}
+.level-path .level-map-node,.level-path .level-map-node:nth-of-type(3),.level-path .level-map-node:nth-of-type(5){background:#172720;border-color:#758d78;color:#f1f4e9}
+.level-path .level-map-arrow{color:#f1cc80}
+.key-box a,.next-role a:not(.button){color:#f1d49a}
+.bim-guide .container{display:block}
+.bim-guide .level-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;padding:0;list-style:none;margin:2rem 0}
+.bim-guide .level-card{padding:1.4rem}
+.bim-guide .level-card h4{font-size:1.45rem;margin-bottom:.65rem;color:#f2e0b7}
+.bim-guide .level-card p{color:#d2ded4;margin-bottom:.4rem}
+.story-concept{margin:2.4rem 0 0;max-width:100%}
+.story-concept img{width:100%;height:auto;border:1px solid #536557}
+.story-concept figcaption{padding-top:.65rem;color:#c4d2c6;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase}
+a:focus-visible,button:focus-visible{outline:3px solid #f3cd7e;outline-offset:4px}
+@media(max-width:700px){.bim-guide .level-list{grid-template-columns:1fr}.hero{background-position:65% center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
