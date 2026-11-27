@@ -86,9 +86,9 @@ window.ROLES = [
   },
   {
     slug: 'mep', number: '07', name: 'Facility Management Engineer', image: 'assets/role-mep.png',
-    hook: 'Connect the systems.',
-    challenge: 'The pump and its power and controls need to work together.',
-    story: 'Trace the fictional mechanical and electrical connections for a waterfall service. Find the missing connection and check the system before a test.',
+    hook: 'Investigate the warning. Check the flow.',
+    challenge: 'A fictional low-flow warning points to a waterfall service fault.',
+    story: 'Use operating information and maintenance records to trace a fictional waterfall fault. Work with QAQC to check the repair and run a simulated flow test.',
     collaboration: 'Use BIM route information and QAQC inspection results to guide the work.',
     levels: [
       { level: 1, title: 'Missing valve', issue: 'A valve is missing from the fictional water circuit.', action: 'Trace the marked pipe and choose the matching valve for the gap.', location: 'Imagined service bay', map: ['Pipe', 'Valve gap', 'Complete line'] },

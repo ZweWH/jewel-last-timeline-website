@@ -368,117 +368,117 @@ window.GROUPS = [
       "mep",
       "qaqc"
     ],
-    "hook": "Trace the fault. Inspect the fix. Test the flow.",
-    "challenge": "A fictional water circuit fails its pre-start check.",
-    "story": "In an imagined training plant, the Facility Management Engineer follows a system diagram while the QAQC Engineer uses an inspection checklist. Each has different evidence; they compare notes, choose a repair and test the circuit together.",
+    "hook": "Find the fault. Check the repair. Bring the flow back.",
+    "challenge": "A low-flow warning points to a fault in the fictional waterfall service.",
+    "story": "The Director sends the pair into the past to investigate a fictional waterfall service area. The Facility Management Engineer uses operating information and maintenance records to trace the problem. The QAQC Engineer checks the equipment, inspection records and repair evidence. They share clues, agree on a fix and run a simulated flow test together.",
     "levels": [
       {
         "level": 1,
-        "title": "Study the warning",
-        "issue": "The training circuit reports a fault.",
-        "location": "Fictional training setting",
+        "title": "Read the warning",
+        "issue": "A low-flow alarm identifies a possible problem in the waterfall service.",
+        "location": "Control station · fictional concept",
         "actions": [
           {
             "role": "mep",
-            "text": "Trace the circuit using the supplied diagram."
+            "text": "Read the fictional dashboard and maintenance log to identify the affected circuit."
           },
           {
             "role": "qaqc",
-            "text": "Review the inspection checklist."
+            "text": "Check the inspection record and match the equipment tag to the affected circuit."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Read the warning",
+          "Check the tag",
+          "Identify the circuit"
         ]
       },
       {
         "level": 2,
-        "title": "Find the defects",
-        "issue": "A connection and a tag do not match the records.",
-        "location": "Fictional training setting",
+        "title": "Trace the route",
+        "issue": "The team must find where the fictional water route loses flow.",
+        "location": "Water service route · fictional concept",
         "actions": [
           {
             "role": "mep",
-            "text": "Find the suspect connection and share its location."
+            "text": "Follow the marked system diagram to the suspect service area and share what the log says."
           },
           {
             "role": "qaqc",
-            "text": "Inspect the joint and tag against the checklist."
+            "text": "Inspect the marked joint and compare its condition with the supplied checklist."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Trace the route",
+          "Inspect the joint",
+          "Share the evidence"
         ]
       },
       {
         "level": 3,
-        "title": "Choose a repair",
-        "issue": "The team must agree on a fix.",
-        "location": "Fictional training setting",
+        "title": "Find the cause",
+        "issue": "The readings and inspection evidence point to different possible faults.",
+        "location": "Investigation point · fictional concept",
         "actions": [
           {
             "role": "mep",
-            "text": "Compare the diagram with the repair choices."
+            "text": "Compare the supplied readings and maintenance history to select a possible cause."
           },
           {
             "role": "qaqc",
-            "text": "Check the choices against the inspection notes."
+            "text": "Share the inspection evidence to help rule out the wrong choices."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Compare readings",
+          "Share inspection clues",
+          "Agree on the cause"
         ]
       },
       {
         "level": 4,
-        "title": "Repair and reinspect",
-        "issue": "The correction needs an independent check.",
-        "location": "Fictional training setting",
+        "title": "Choose and recheck",
+        "issue": "The team must correct the fictional defect and verify the work.",
+        "location": "Service connection · fictional concept",
         "actions": [
           {
             "role": "mep",
-            "text": "Apply the agreed in-game repair."
+            "text": "Select the agreed in-game repair from the supplied options and tell your teammate what changed."
           },
           {
             "role": "qaqc",
-            "text": "Reinspect and tell your partner what remains."
+            "text": "Reinspect the repair and tag against the supplied checklist; request another attempt if needed."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Choose a repair",
+          "Reinspect the work",
+          "Confirm the fix"
         ]
       },
       {
         "level": 5,
-        "title": "Run the test",
-        "issue": "A simulated flow test checks the result.",
-        "location": "Fictional training setting",
+        "title": "Test and report",
+        "issue": "The waterfall service must pass a simulated flow check before handover.",
+        "location": "Test station · fictional concept",
         "actions": [
           {
             "role": "mep",
-            "text": "Start the test and watch the circuit."
+            "text": "Start the simulated flow test and check the operating display."
           },
           {
             "role": "qaqc",
-            "text": "Check the result and confirm the handover."
+            "text": "Compare the result with the supplied test target and confirm the inspection record."
           }
         ],
         "map": [
-          "Share clues",
-          "Work together",
-          "Check the result"
+          "Start the test",
+          "Check the result",
+          "Report to the Director"
         ]
       }
     ],
-    "mission": "The Water Test"
+    "mission": "The Missing Flow"
   },
   {
     "slug": "sustainability-architect",
