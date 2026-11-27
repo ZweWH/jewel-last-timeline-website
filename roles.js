@@ -5,7 +5,7 @@ window.ROLES = [
     hook: 'Shrink down. Find the clash.',
     challenge: 'A waterfall service pipe crosses an air duct and blocks access.',
     story: 'Travel to a fictional service corridor and use a shrink jetpack to see the problem up close. Find a route that leaves enough room for maintenance.',
-    collaboration: 'Share the new route with the M&E and Technical teams.',
+    collaboration: 'Share the new route with the Facility Management and Technical teams.',
     levels: [
       { level: 1, title: 'Pipe meets duct', issue: 'A waterfall pipe crosses an air duct.', action: 'Use the shrink jetpack to find the clash and choose a clear pipe route from the interaction menu.', location: 'Imagined basement corridor', map: ['Entry', 'Pipe clash', 'Clear route'] },
       { level: 2, title: 'Blocked by a beam', issue: 'A second pipe route passes through a support beam.', action: 'Fly along the overhead services, find the clash and select a route around the beam.', location: 'Imagined service bay', map: ['Lift point', 'Beam clash', 'New route'] },
@@ -33,7 +33,7 @@ window.ROLES = [
     hook: 'Make the details match.',
     challenge: 'The waterfall equipment information does not match across the drawing and records.',
     story: 'Review the fictional design information before the team installs the equipment. Find the differences and choose the correct details.',
-    collaboration: 'Share the checked details with BIM and M&E.',
+    collaboration: 'Share the checked details with BIM and Facility Management.',
     levels: [
       { level: 1, title: 'Wrong equipment tag', issue: 'A pump tag does not match the supplied drawing.', action: 'Compare the two records and select the correct tag.', location: 'Imagined drawing desk', map: ['Pump tag', 'Drawing', 'Correct tag'] },
       { level: 2, title: 'Pipe size mismatch', issue: 'A pipe size differs between the drawing and equipment schedule.', action: 'Use the supplied reference to find and correct the wrong size.', location: 'Imagined records room', map: ['Drawing', 'Wrong size', 'Correct size'] },
@@ -61,7 +61,7 @@ window.ROLES = [
     hook: 'Find it. Fix it. Check again.',
     challenge: 'The fictional waterfall services have defects that must be fixed before handover.',
     story: 'Inspect the installation carefully. A leaking connection, an incomplete seal or a wrong tag could delay the return of the flow.',
-    collaboration: 'Share the inspection results with M&E and Technical.',
+    collaboration: 'Share the inspection results with Facility Management and Technical.',
     levels: [
       { level: 1, title: 'Missing seal', issue: 'A service opening has an incomplete seal.', action: 'Find it, select the supplied repair and reinspect the seal.', location: 'Imagined service opening', map: ['Entry', 'Open seal', 'Reinspect'] },
       { level: 2, title: 'Leaking connection', issue: 'A pipe joint leaks during a fictional inspection.', action: 'Locate the leak, choose the repair and check the joint again.', location: 'Imagined pipe bay', map: ['Entry', 'Leaking joint', 'Recheck'] },
@@ -75,7 +75,7 @@ window.ROLES = [
     hook: 'Count what the job needs.',
     challenge: 'The team needs a complete waterfall service package within a training budget.',
     story: 'Use a fictional drawing and supplied prices to work out what the project needs. A low price is not useful if important parts are missing.',
-    collaboration: 'Confirm the required items with Technical and M&E.',
+    collaboration: 'Confirm the required items with Technical and Facility Management.',
     levels: [
       { level: 1, title: 'Count the fittings', issue: 'The service package list is missing fittings.', action: 'Count the fittings shown on the supplied drawing and complete the list.', location: 'Imagined drawing desk', map: ['Drawing', 'Fittings', 'Complete list'] },
       { level: 2, title: 'Measure and price', issue: 'A pipe run has no quantity or cost.', action: 'Measure its length on the drawing and calculate its cost using the supplied rate.', location: 'Imagined measuring desk', map: ['Pipe plan', 'Measure', 'Price'] },
@@ -85,7 +85,7 @@ window.ROLES = [
     ]
   },
   {
-    slug: 'mep', number: '07', name: 'M&E Engineer', image: 'assets/role-mep.png',
+    slug: 'mep', number: '07', name: 'Facility Management Engineer', image: 'assets/role-mep.png',
     hook: 'Connect the systems.',
     challenge: 'The pump and its power and controls need to work together.',
     story: 'Trace the fictional mechanical and electrical connections for a waterfall service. Find the missing connection and check the system before a test.',
@@ -103,7 +103,7 @@ window.ROLES = [
     hook: 'Restore the flow wisely.',
     challenge: 'The waterfall needs a practical plan for using water and energy.',
     story: 'Compare fictional operating choices and their effects. Choose a balanced plan that supports the waterfall while reducing waste.',
-    collaboration: 'Share the chosen plan with M&E for the system test.',
+    collaboration: 'Share the chosen plan with Facility Management for the system test.',
     levels: [
       { level: 1, title: 'Water being wasted', issue: 'A fictional water-use report shows an unnecessary loss.', action: 'Compare the supplied choices and select a way to reduce the waste.', location: 'Imagined review desk', map: ['Report', 'Water loss', 'Better choice'] },
       { level: 2, title: 'Energy choice', issue: 'Two pump settings use different amounts of energy.', action: 'Compare the supplied energy and flow figures and choose a setting that meets the target.', location: 'Imagined pump dashboard', map: ['Settings', 'Energy use', 'Flow target'] },

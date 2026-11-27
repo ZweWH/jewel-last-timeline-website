@@ -363,14 +363,14 @@ window.GROUPS = [
   {
     "slug": "mep-qaqc",
     "number": "04",
-    "name": "M&E Engineer + QAQC Engineer",
+    "name": "Facility Management Engineer + QAQC Engineer",
     "roles": [
       "mep",
       "qaqc"
     ],
     "hook": "Trace the fault. Inspect the fix. Test the flow.",
     "challenge": "A fictional water circuit fails its pre-start check.",
-    "story": "In an imagined training plant, the M&E Engineer follows a system diagram while the QAQC Engineer uses an inspection checklist. Each has different evidence; they compare notes, choose a repair and test the circuit together.",
+    "story": "In an imagined training plant, the Facility Management Engineer follows a system diagram while the QAQC Engineer uses an inspection checklist. Each has different evidence; they compare notes, choose a repair and test the circuit together.",
     "levels": [
       {
         "level": 1,
